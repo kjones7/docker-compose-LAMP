@@ -1,0 +1,5 @@
+{
+    "require-dev": {
+        "codeception/base": "^2.4"
+    }
+}
