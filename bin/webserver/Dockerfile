@@ -9,6 +9,9 @@ RUN apt-get -y install --fix-missing apt-utils build-essential git curl libcurl3
 # Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+# Install Codeception
+RUN composer require codeception/codeception --dev
+
 # Install xdebug
 RUN pecl install xdebug-2.5.0
 RUN docker-php-ext-enable xdebug
