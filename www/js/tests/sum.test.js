@@ -22,5 +22,5 @@ test('sub', () => {
 });
   
 test('sub', () => {
-    expect(sub(11, 2)).toBe(92);
+    expect(sub(11, 2)).toBe(9);
 });
