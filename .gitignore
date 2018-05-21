@@ -4,5 +4,4 @@
 /data/*
 /logs/*
 .DS_Store
-/www/vendor/*
-/www/node_modules/*
+/www/
