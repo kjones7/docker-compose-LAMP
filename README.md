@@ -7,6 +7,8 @@ This is a basic LAMP stack environment built using Docker Compose. It consists f
 * MySQL 5.7
 * phpMyAdmin
 
+This repository is a fork of https://github.com/sprintcube/docker-compose-lamp licensed under the MIT License.
+
 ## Installation
 
 Clone this repository on your local computer. Run the `docker-compose up -d`.
