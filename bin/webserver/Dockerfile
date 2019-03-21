@@ -28,13 +28,14 @@ RUN echo "export PATH=$PATH:/var/www/html/vendor/bin/:/var/www/html/node_modules
 #RUN pecl install zmq-beta
 
 # Install xdebug
-RUN pecl install xdebug-2.6.0
+RUN pecl install xdebug-2.7.0
 #RUN docker-php-ext-enable xdebug
 
 # BEGIN Other PHP7 Extensions
 
-RUN apt-get -y install libmcrypt-dev
-RUN docker-php-ext-install mcrypt
+# TODO - mcrypt download not working. Come back another time and enable if needed.
+#RUN pecl install mcrypt-1.0.2
+#RUN docker-php-ext-enable mcrypt
 
 RUN apt-get -y install libsqlite3-dev libsqlite3-0 mysql-client
 RUN docker-php-ext-install pdo_mysql 
@@ -45,17 +46,19 @@ RUN docker-php-ext-install curl
 RUN docker-php-ext-install tokenizer
 RUN docker-php-ext-install json
 
-RUN apt-get -y install zlib1g-dev
-RUN docker-php-ext-install zip
+# TODO - download not working. Come back another time and enable if needed.
+#RUN apt-get -y install zlib1g-dev
+#RUN docker-php-ext-install zip
 
 RUN apt-get -y install libicu-dev
 RUN docker-php-ext-install -j$(nproc) intl
 
 RUN docker-php-ext-install mbstring
 
-RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng12-dev
-RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ 
-RUN docker-php-ext-install -j$(nproc) gd
+# TODO - download not working. Come back another time and enable if needed.
+#RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng12-dev
+#RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
+#RUN docker-php-ext-install -j$(nproc) gd
 
 # END Other PHP7 Extensions
 
